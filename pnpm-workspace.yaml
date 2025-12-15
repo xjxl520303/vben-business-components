@@ -74,7 +74,7 @@ catalog:
   cac: ^6.7.14
   chalk: ^5.4.1
   cheerio: ^1.1.0
-  circular-dependency-scanner: ^2.3.0
+  circular-dependency-scanner: ^3.0.1
   class-variance-authority: ^0.7.1
   clsx: ^2.1.1
   commitlint-plugin-function-rules: ^4.1.1
