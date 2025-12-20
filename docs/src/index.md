@@ -4,12 +4,12 @@ layout: home
 sidebar: false
 
 hero:
-  name: Vben Admin
-  text: 企业级管理系统框架
-  tagline: 全新升级，开箱即用，简单高效
+  name: Vben Admin Components
+  text: 管理系统业务组件库
+  tagline: 交流学习，案例分享，经验积累
   image:
     src: https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp
-    alt: Vben Admin
+    alt: Vben Admin Components
   actions:
     - theme: brand
       text: 快速开始 ->
@@ -19,10 +19,7 @@ hero:
       link: https://www.vben.pro
     - theme: alt
       text: 在 GitHub 查看
-      link: https://github.com/vbenjs/vue-vben-admin
-    - theme: alt
-      text: DeepWiki 文档
-      link: https://deepwiki.com/vbenjs/vue-vben-admin
+      link: https://github.com/xjxl520303/vben-business-components
 
 features:
   - icon: 🚀
@@ -75,37 +72,3 @@ features:
     link: https://nitro.unjs.io/
     linkText: 官方站点
 ---
-
-<!-- <script setup>
-import {
-  VPTeamPage,
-  VPTeamPageTitle,
-  VPTeamMembers,
-  VPTeamPageSection
-} from 'vitepress/theme';
-
-const members = [
-  {
-    avatar: 'https://avatars.githubusercontent.com/u/28132598?v=4',
-    name: 'Vben',
-    title: '创建者',
-    desc: 'Vben Admin以及相关生态的作者，负责项目的整体开发。',
-    links: [
-      { icon: 'github', link: 'https://github.com/anncwb' },
-    ]
-  },
-]
-</script>
-
-<VPTeamPage>
-  <VPTeamPageTitle>
-    <template #title>
-      核心成员介绍
-    </template>
-  </VPTeamPageTitle>
-  <VPTeamMembers
-    :members="members"
-  />
-</VPTeamPage> -->
-
-<VbenContributors />

@@ -1,111 +1,198 @@
----
-outline: deep
----
+# 快速开始指南
 
-# 快速开始 {#quick-start}
+本指南将帮助您快速了解项目并开始开发。
 
-## 前置准备
+## 环境准备
 
-::: info 环境要求
-
-在启动项目前，你需要确保你的环境满足以下要求：
-
-- [Node.js](https://nodejs.org/en) 20.15.0 及以上版本，推荐使用 [fnm](https://github.com/Schniz/fnm) 、 [nvm](https://github.com/nvm-sh/nvm) 或者直接使用[pnpm](https://pnpm.io/cli/env) 进行版本管理。
-- [Git](https://git-scm.com/) 任意版本。
-
-验证你的环境是否满足以上要求，你可以通过以下命令查看版本：
+### 1. 安装 Node.js 和 pnpm
 
 ```bash
-# 出现相应 node LTS版本即可
-node -v
-# 出现相应 git 版本即可
-git -v
-```
+# 确保 Node.js >= 20.12.0
+node --version
 
-:::
-
-## 启动项目
-
-### 获取源码
-
-::: code-group
-
-```sh [GitHub]
-# clone 代码
-git clone https://github.com/vbenjs/vue-vben-admin.git
-```
-
-```sh [Gitee]
-# clone 代码
-# Gitee 的代码可能不是最新的
-git clone https://gitee.com/annsion/vue-vben-admin.git
-```
-
-:::
-
-::: danger 注意
-
-注意存放代码的目录及所有父级目录不能存在中文、韩文、日文以及空格，否则安装依赖后启动会出错。
-
-:::
-
-### 安装依赖
-
-在你的代码目录内打开终端，并执行以下命令:
-
-```bash
-# 进入项目目录
-cd vue-vben-admin
-
-# 使用项目指定的pnpm版本进行依赖安装
+# 安装 pnpm
 npm i -g corepack
+corepack enable
+```
 
-# 安装依赖
+### 2. 克隆项目
+
+```bash
+git clone https://github.com/xjxl520303/vben-business-components.git
+cd vben-business-components
+```
+
+### 3. 安装依赖
+
+```bash
 pnpm install
 ```
 
-::: tip 注意
+## 项目设置
 
-- 项目只支持使用 `pnpm` 进行依赖安装，默认会使用 `corepack` 来安装指定版本的 `pnpm`。:
-- 如果你的网络环境无法访问npm源，你可以设置系统的环境变量`COREPACK_NPM_REGISTRY=https://registry.npmmirror.com`，然后再执行`pnpm install`。
-- 如果你不想使用`corepack`，你需要禁用`corepack`，然后使用你自己的`pnpm`进行安装。
+### 1. 配置 Git Remote
 
-:::
-
-### 运行项目
-
-#### 选择项目
-
-执行以下命令运行项目:
+添加官方仓库为 upstream，以便后续同步更新：
 
 ```bash
-# 启动项目
-pnpm dev
+# 添加 upstream
+git remote add upstream https://github.com/vbenjs/vue-vben-admin.git
+
+# 验证配置
+git remote -v
+# 应该看到：
+# origin    https://github.com/your-org/vben-business-components.git (你的仓库)
+# upstream  https://github.com/vbenjs/vue-vben-admin.git (官方仓库)
 ```
 
-此时，你会看到类似如下的输出，选择你需要运行的项目：
+### 2. 检查同步状态
 
 ```bash
-│
-◆  Select the app you need to run [dev]:
-│  ○ @vben/web-antd
-│  ○ @vben/web-ele
-│  ○ @vben/web-naive
-│  ○ @vben/docs
-│  ● @vben/playground
-└
+# 检查与官方仓库的同步状态
+pnpm tsx scripts/check-sync-status.ts
 ```
 
-现在，你可以在浏览器访问 `http://localhost:5555` 查看项目。
+## 开发工作流
 
-#### 运行指定项目
-
-如果你不想选择项目，可以直接运行以下命令运行你需要的应用：
+### 启动开发服务器
 
 ```bash
-pnpm run dev:antd
-pnpm run dev:ele
-pnpm run dev:naive
-pnpm run dev:docs
-pnpm run dev:play
+# Element Plus 演示应用（主要开发目标）
+pnpm dev:ele
+
+# 文档站点
+pnpm dev:docs
 ```
+
+访问：
+- 演示应用：http://localhost:5173
+- 文档站点：http://localhost:5174
+
+### 创建新组件
+
+1. **创建组件目录**
+   ```bash
+   mkdir -p packages/effects/common-ui/src/components/vben-example
+   cd packages/effects/common-ui/src/components/vben-example
+   ```
+
+2. **使用模板创建组件**
+   ```bash
+   # 复制组件模板
+   cp ../../../../../../scripts/templates/component-template.vue vben-example.vue
+   
+   # 复制演示配置模板
+   cp ../../../../../../scripts/templates/component-demo.config.ts demo.config.ts
+   
+   # 创建导出文件
+   echo "export { default as VbenExample } from './vben-example.vue';" > index.ts
+   ```
+
+3. **创建演示页面**
+   ```bash
+   mkdir -p apps/web-ele/src/views/demos/components/vben-example
+   # 创建演示页面文件
+   ```
+
+4. **创建文档**
+   ```bash
+   cp scripts/templates/component-doc.md docs/src/components/common-ui/vben-example.md
+   ```
+
+5. **更新路由**
+   手动更新 `apps/web-ele/src/router/routes/modules/demos.ts`，添加新组件的路由。
+
+### 运行测试
+
+```bash
+# 类型检查
+pnpm check:type
+
+# 代码检查
+pnpm lint
+
+# 单元测试
+pnpm test:unit
+```
+
+## 同步官方更新
+
+### 检查同步状态
+
+```bash
+pnpm tsx scripts/check-sync-status.ts
+```
+
+### 执行同步
+
+```bash
+# 同步 main 分支
+./scripts/sync-upstream.sh
+
+# 同步指定分支
+./scripts/sync-upstream.sh v5.5.9
+```
+
+### 处理冲突
+
+如果同步时出现冲突：
+
+1. 查看冲突文件：
+   ```bash
+   git status
+   ```
+
+2. 解决冲突：
+   - 核心功能冲突：优先保留官方版本
+   - 业务组件冲突：优先保留我们的定制版本
+   - 配置冲突：手动合并
+
+3. 完成合并：
+   ```bash
+   git add <resolved-files>
+   git commit
+   ```
+
+## 下一步
+
+### 1. 阅读详细文档
+
+- [项目规划文档](./PLAN.md) - 了解完整的项目规划和实施计划
+- [贡献指南](./CONTRIBUTING.md) - 了解如何贡献代码
+
+### 2. 探索现有组件
+
+查看 `packages/effects/common-ui/src/components/` 目录下的现有组件，了解组件开发模式。
+
+### 3. 查看演示示例
+
+访问演示应用，查看现有组件的演示和文档。
+
+### 4. 开始开发
+
+选择一个需要开发的组件，按照开发流程开始工作。
+
+## 常用命令
+
+```bash
+# 开发
+pnpm dev:ele          # 启动 Element Plus 演示应用
+pnpm dev:docs         # 启动文档站点
+
+# 构建
+pnpm build:ele        # 构建 Element Plus 应用
+pnpm build:docs       # 构建文档站点
+
+# 检查
+pnpm check:type       # 类型检查
+pnpm lint             # 代码检查
+pnpm test:unit        # 单元测试
+
+# 同步
+pnpm tsx scripts/check-sync-status.ts  # 检查同步状态
+./scripts/sync-upstream.sh            # 同步官方代码
+```
+
+---
+
+祝您开发愉快！🎉
