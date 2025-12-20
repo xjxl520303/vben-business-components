@@ -7,151 +7,105 @@
 
 [![license](https://img.shields.io/github/license/anncwb/vue-vben-admin.svg)](LICENSE)
 
-  <h1>Vue Vben Admin</h1>
+  <h1>Vben Admin Components</h1>
 </div>
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vbenjs_vue-vben-admin&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vbenjs_vue-vben-admin) [![codeql](https://github.com/vbenjs/vue-vben-admin/actions/workflows/codeql.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/codeql.yml) [![build](https://github.com/vbenjs/vue-vben-admin/actions/workflows/build.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/build.yml) [![ci](https://github.com/vbenjs/vue-vben-admin/actions/workflows/ci.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/ci.yml) [![deploy](https://github.com/vbenjs/vue-vben-admin/actions/workflows/deploy.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/deploy.yml)
+## 📖 项目介绍
 
-**English** | [中文](./README.zh-CN.md) | [日本語](./README.ja-JP.md)
+Vben Business Components 是在 [vue-vben-admin](https://github.com/vbenjs/vue-vben-admin) 的基础上添加了管理系统中一些常用的业务组件，专注于 **Element Plus** UI 框架的常用业务组件开发与分享。
 
-## Introduction
+本项目的初衷在于分享在企业管理系统中积累的一些基于 Element Plus 的业务公共组件，以及公司基于 Element plus 二次开发添加的额外基础组件，除此之外也分享基于 portal-vue 的开发模式探索。
 
-Vue Vben Admin is a free and open source middle and back-end template. Using the latest `vue3`, `vite`, `TypeScript` and other mainstream technology development, the out-of-the-box middle and back-end front-end solutions can also be used for learning reference.
+项目中并未用到 Vben Admin 提供的通用组件，但是借鉴了其中部分组件的实现思路并与原来在公司内部的实现版本进行了优化。项目提供的组件可能会和 Vben Admin 提供的通用组件存在功能相似但是实现方式及 API 有所差异，但二者并不冲突。
 
-## Upgrade Notice
+项目中不会去罗列一些其他 Admin 项目演示的各种第三方库提供的功能，只根据实际业务组件的封装需求才会提及相关库。
 
-This is the latest version, 5.0, and it is not compatible with previous versions. If you are starting a new project, it is recommended to use the latest version. If you wish to view the old version, please use the [v2 branch](https://github.com/vbenjs/vue-vben-admin/tree/v2).
+项目目前还在不断迭代完善中，内容会经常变动，所以仅作参考。
 
-## Features
+## 🚀 快速开始
 
-- **Latest Technology Stack**: Developed with cutting-edge front-end technologies like Vue 3 and Vite
-- **TypeScript**: A language for application-scale JavaScript
-- **Themes**: Multiple theme colors available with customizable options
-- **Internationalization**: Comprehensive built-in internationalization support
-- **Permissions**: Built-in solution for dynamic route-based permission generation
+### 环境要求
 
-## Preview
+- Node.js >= 20.12.0
+- pnpm >= 10.0.0
 
-- [Vben Admin](https://vben.pro/) - Full version Chinese site
-
-Test Account: vben/123456
-
-<div align="center">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview1.png">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview2.png">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview3.png">
-</div>
-
-### Use Gitpod
-
-Open the project in Gitpod (free online dev environment for GitHub) and start coding immediately.
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/vbenjs/vue-vben-admin)
-
-## Documentation
-
-[Document](https://doc.vben.pro/)
-
-## Install and Use
-
-1. Get the project code
+### 安装
 
 ```bash
-git clone https://github.com/vbenjs/vue-vben-admin.git
-```
+# 克隆项目
+git clone https://github.com/xjxl520303/vben-business-components.git
+cd vben-business-components
 
-2. Install dependencies
-
-```bash
-cd vue-vben-admin
+# 安装依赖
 npm i -g corepack
+corepack enable
 pnpm install
 ```
 
-3. Run
+### 开发
 
 ```bash
-pnpm dev
+# 启动 Element Plus 演示应用
+pnpm dev:ele
+
+# 启动文档站点
+pnpm dev:docs
 ```
 
-4. Build
+### 构建
 
 ```bash
-pnpm build
+# 构建 Element Plus 应用
+pnpm build:ele
+
+# 构建文档站点
+pnpm build:docs
 ```
 
-## Change Log
+## 📁 项目结构
 
-[CHANGELOG](https://github.com/vbenjs/vue-vben-admin/releases)
+```
+vben-business-components/
+├── apps/
+│   ├── web-ele/              # Element Plus 演示应用（主要）
+│   ├── backend-mock/         # Mock 服务
+│   └── docs/                 # 文档站点
+├── packages/
+│   ├── business/             # 业务组件
+│   └── ...
+```
 
-## How to Contribute
+<!-- ## 📦 组件列表 -->
 
-You are very welcome to join! [Raise an issue](https://github.com/anncwb/vue-vben-admin/issues/new/choose) or submit a Pull Request.
+## 🤝 贡献
 
-**Pull Request Process:**
+我们欢迎所有形式的贡献！
 
-1. Fork the code
-2. Create your branch: `git checkout -b feat/xxxx`
-3. Submit your changes: `git commit -am 'feat(function): add xxxxx'`
-4. Push your branch: `git push origin feat/xxxx`
-5. Submit `pull request`
+- 🐛 报告 Bug
+- 💡 提出新功能建议
+- 📝 改进文档
+- 🔧 提交 Pull Request
 
-## Git Contribution Submission Specification
+## 📄 许可证
 
-Reference [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) specification ([Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular))
+本项目采用 [MIT](./LICENSE) 许可证。
 
-- `feat` Add new features
-- `fix` Fix the problem/BUG
-- `style` The code style is related and does not affect the running result
-- `perf` Optimization/performance improvement
-- `refactor` Refactor
-- `revert` Undo edit
-- `test` Test related
-- `docs` Documentation/notes
-- `chore` Dependency update/scaffolding configuration modification etc.
-- `ci` Continuous integration
-- `types` Type definition file changes
+## 🙏 致谢
 
-## Browser Support
+- [vue-vben-admin](https://github.com/vbenjs/vue-vben-admin) - A modern vue admin panel built with Vue3, Shadcn UI, Vite, TypeScript, and Monorepo. It's fast! 
+- [Element Plus](https://element-plus.org/) - A Vue.js 3 UI library
+- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) - A utility-first CSS framework for rapid UI development. 
+- [portal-vue](https://github.com/LinusBorg/portal-vue) - A Portal Component for Vue 3, to render DOM outside of a component, anywhere in the document.
+- [Vueuse](https://github.com/vueuse/vueuse) - Collection of essential Vue Composition Utilities for Vue 3 
+- [Mockoon](https://github.com/mockoon/mockoon) - Mockoon is the easiest and quickest way to run mock APIs locally. No remote deployment, no account required, open source. 
 
-The `Chrome 80+` browser is recommended for local development
+## 📞 联系方式
 
-Support modern browsers, not IE
+- GitHub Issues: [提交问题](https://github.com/xjxl520303/vben-business-components/issues)
+- Discussions: [参与讨论](https://github.com/xjxl520303/vben-business-components/discussions)
 
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
-| :-: | :-: | :-: | :-: |
-| last 2 versions | last 2 versions | last 2 versions | last 2 versions |
+---
 
-## Maintainer
-
-[@Vben](https://github.com/anncwb)
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=vbenjs/vue-vben-admin&type=Date)](https://star-history.com/#vbenjs/vue-vben-admin&Date)
-
-## Donate
-
-If you think this project is helpful to you, you can help the author buy a cup of coffee to show your support!
-
-![donate](https://unpkg.com/@vbenjs/static-source@0.1.7/source/sponsor.png)
-
-<a style="display: block;width: 100px;height: 50px;line-height: 50px; color: #fff;text-align: center; background: #408aee;border-radius: 4px;" href="https://www.paypal.com/paypalme/cvvben">Paypal Me</a>
-
-## Contributors
-
-<a href="https://openomy.app/github/vbenjs/vue-vben-admin" target="_blank" style="display: block; width: 100%;" align="center">
-  <img src="https://openomy.app/svg?repo=vbenjs/vue-vben-admin&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
- </a>
-
-<a href="https://github.com/vbenjs/vue-vben-admin/graphs/contributors">
-  <img alt="Contributors" src="https://contrib.rocks/image?repo=vbenjs/vue-vben-admin" />
-</a>
-
-## Discord
-
-- [Github Discussions](https://github.com/anncwb/vue-vben-admin/discussions)
-
-## License
-
-[MIT © Vben-2020](./LICENSE)
+<div align="center">
+  <p>如果这个项目对你有帮助，请给一个 ⭐️ Star</p>
+</div>

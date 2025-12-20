@@ -1,49 +1,33 @@
-# 关于 Vben Admin
+# 关于 Vben Admin Components
 
-::: info 你正在阅读的是 [Vben Admin](https://github.com/vbenjs/vue-vben-admin) `5.0`版本的文档！
+Vben Admin Components 是基于 [Vben Admin](https://github.com/vbenjs/vue-vben-admin) `5.5.9` 版本进行二次开发，用于分享基于 Element Plus 的管理系统中组件封装思路和案例。
 
-- Vben Admin 2.x 目前已存档，仅进行重大问题修复。
-- 新版本与旧版本不兼容，如果你使用的是旧版本（v2、v3），请查看 [Vue Vben Admin 2.x 文档](https://doc.vvbin.cn)
-- 如发现文档有误，欢迎提交 [issue](https://github.com/vbenjs/vue-vben-admin/issues) 帮助我们改进。
-- 如果你只是想体验一下，你可以查看[快速开始](./quick-start.md)。
+::: info 说明
+
+虽然当前项目是基于 Element Plus 进行业务组件的封装，但是开发思路可以借鉴到其他 UI 框架中。
+
+:::
+
+::: warning 注意
+
+- 本项目并没有去同步后续**通用组件**的变更内容，因为并未使用这些组件。
 
 :::
 
-[Vben Admin](https://github.com/vbenjs/vue-vben-admin) 是一个基于 [Vue3.0](https://github.com/vuejs/core)、[Vite](https://github.com/vitejs/vite)、 [TypeScript](https://www.typescriptlang.org/) 的中后台解决方案，目标是为开发中大型项目提供开箱即用的解决方案。包括二次封装组件、utils、hooks、动态菜单、权限校验、多主题配置、按钮级别权限控制等功能。项目会使用前端较新的技术栈，可以作为项目的启动模板，以帮助你快速搭建企业级中后台产品原型。也可以作为一个示例，用于学习 `vue3`、`vite`、`ts` 等主流技术。该项目会持续跟进最新技术，并将其应用在项目中。
+## 项目特色
 
-## 特点
+- 以 Vben Admin 项目为基石，仅添加一个包和相关文档
+- 分享在企业管理系统开发过程中业务组件封装经验，供学习和交流
+- 介绍基于 portal-vue 的开发模式
 
-- **最新技术栈**：使用 `Vue3`、`Vite`、`TypeScript` 等前端前沿技术开发。
-- **国际化**：内置完善的国际化方案，支持多语言切换。
-- **权限验证**：完善的权限验证方案，按钮级别权限控制。
-- **多主题**：内置多种主题配置和黑暗模式，满足个性化需求。
-- **动态菜单**：支持动态菜单，可以根据权限配置显示菜单。
-- **Mock 数据**：基于 `Nitro` 的本地高性能 Mock 数据方案。
-- **组件丰富**：提供了丰富的组件，可以满足大部分的业务需求。
-- **规范**：代码规范，使用 `ESLint`、`Prettier`、`Stylelint`、`Publint`、`CSpell` 等工具保证代码质量。
-- **工程化**：使用 `Pnpm Monorepo`、`TurboRepo`、`Changeset` 等工具，提高开发效率。
-- **多UI库支持**：支持 `Ant Design Vue`、`Element Plus`、`Naive` 等主流 UI 库，不再限制于特定框架。
+## 项目的改动点
 
-## 浏览器支持
+- 删除了目录 `apps/` 中除 Element Plus 外的其他 UI 组件库。
+- `docs/` 中删除了与当前项目无关的说明文档。
+- 替换原项目中有关贡献者相关的信息。
 
-- **本地开发**推荐使用`Chrome 最新版`浏览器，**不支持**`Chrome 80`以下版本。
+## 如何应用到原有的 Vben Admin 项目或其他项目中
 
-- **生产环境**支持现代浏览器，不支持 IE。
+所有业务组件库的代码放置在 `packages/business` 目录中，文档位于 `docs/src/components/business` 目录中，只需要复制到 Vben Admin 项目中并安装相关依赖即可。
 
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png" alt="IE" width="24px" height="24px"  />](http://godban.github.io/browsers-support-badges/)IE | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt=" Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)Safari |
-| :-: | :-: | :-: | :-: | :-: |
-| 不支持 | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
-
-## 贡献
-
-- [Vben Admin](https://github.com/vbenjs/vue-vben-admin) 还在持续更新中，本项目欢迎您的参与，共同维护，逐步完善，打造更好的中后台解决方案。
-- 如果你有兴趣加入我们，可以通过以下方式开始，我们会根据你的活跃度邀请你加入。
-
-::: info 加入我们
-
-- 长期提交 `PR`。
-- 提供有价值的建议。
-- 参与讨论，帮助解决 `issue`。
-- 共同维护文档。
-
-:::
+对于非 Vben Admin 的项目，需要注意代码中依赖的 TypeScript 类型，如果对应项目中没有则需要自行拷贝。
