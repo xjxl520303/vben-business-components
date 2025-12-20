@@ -44,12 +44,12 @@ export const shared = defineConfig({
       },
       provider: 'local',
     },
-    siteTitle: 'Vben Admin',
+    siteTitle: 'Vben Admin Components',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vbenjs/vue-vben-admin' },
     ],
   },
-  title: 'Vben Admin',
+  title: 'Vben Admin Components',
   vite: {
     build: {
       chunkSizeWarningLimit: Infinity,
@@ -88,7 +88,7 @@ export const shared = defineConfig({
             username: 'likui628',
           },
         ],
-        repoURL: () => 'https://github.com/vbenjs/vue-vben-admin',
+        repoURL: () => 'https://github.com/xjxl520303/vben-business-components',
       }),
       GitChangelogMarkdownSection(),
       viteArchiverPlugin({ outputDir: '.vitepress' }),
