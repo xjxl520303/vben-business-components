@@ -12,6 +12,11 @@ import {
   GitChangelog,
   GitChangelogMarkdownSection,
 } from '@nolebase/vitepress-plugin-git-changelog/vite';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import {
+  componentPreview,
+  containerPreview,
+} from '@vitepress-demo-preview/plugin';
 import tailwind from 'tailwindcss';
 import { defineConfig, postcssIsolateStyles } from 'vitepress';
 import {
@@ -19,16 +24,20 @@ import {
   groupIconVitePlugin,
 } from 'vitepress-plugin-group-icons';
 
-import { demoPreviewPlugin } from './plugins/demo-preview';
 import { search as zhSearch } from './zh.mts';
+
+const alias = {
+  '@': resolve(__dirname, '../../src'),
+};
 
 export const shared = defineConfig({
   appearance: 'dark',
   head: head(),
   markdown: {
     preConfig(md) {
-      md.use(demoPreviewPlugin);
       md.use(groupIconMdPlugin);
+      md.use(componentPreview, { alias });
+      md.use(containerPreview, { alias });
     },
   },
   pwa: pwa(),
@@ -72,6 +81,7 @@ export const shared = defineConfig({
       stringify: true,
     },
     plugins: [
+      vueJsx(), // 支持 TSX 文件
       GitChangelog({
         mapAuthors: [
           {
@@ -87,6 +97,11 @@ export const shared = defineConfig({
             name: 'Li Kui',
             username: 'likui628',
           },
+          {
+            mapByNameAliases: ['jenemy'],
+            name: 'jenemy',
+            username: 'xjxl520303',
+          },
         ],
         repoURL: () => 'https://github.com/xjxl520303/vben-business-components',
       }),
@@ -95,6 +110,9 @@ export const shared = defineConfig({
       groupIconVitePlugin(),
       await viteVxeTableImportsPlugin(),
     ],
+    resolve: {
+      alias,
+    },
     server: {
       fs: {
         allow: ['../..'],

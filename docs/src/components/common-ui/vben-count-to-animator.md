@@ -18,13 +18,13 @@ outline: deep
 
 通过 `start-val` 和 `end-val`设置数字动画的开始值和结束值， 持续时间`3000`ms。
 
-<DemoPreview dir="demos/vben-count-to-animator/basic" />
+<preview path="@/demos/vben-count-to-animator/basic/index.vue" />
 
 ## 自定义前缀及分隔符
 
 通过 `prefix` 和 `separator` 设置数字动画的前缀和分隔符。
 
-<DemoPreview dir="demos/vben-count-to-animator/custom" />
+<preview path="@/demos/vben-count-to-animator/custom/index.vue" />
 
 ### Props
 

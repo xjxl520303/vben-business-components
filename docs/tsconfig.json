@@ -10,9 +10,11 @@
   "include": [
     ".vitepress/*.mts",
     ".vitepress/**/*.ts",
+    ".vitepress/**/*.tsx",
     ".vitepress/**/*.vue",
     "src/*.mts",
     "src/**/*.ts",
+    "src/**/*.tsx",
     "src/**/*.vue"
   ],
   "exclude": ["node_modules"]
