@@ -242,19 +242,19 @@ export { initComponentAdapter };
 
 使用 `useVbenForm` 创建最基础的表单。
 
-<DemoPreview dir="demos/vben-form/basic" />
+<preview path="@/demos/vben-form/basic/index.vue" />
 
 ## 查询表单
 
 查询表单是一种特殊的表单，用于查询数据。查询表单不会触发表单验证，只会触发查询事件。
 
-<DemoPreview dir="demos/vben-form/query" />
+<preview path="@/demos/vben-form/query/index.vue" />
 
 ## 表单校验
 
 表单校验是一个非常重要的功能，可以通过 `rules` 属性进行校验。
 
-<DemoPreview dir="demos/vben-form/rules" />
+<preview path="@/demos/vben-form/rules/index.vue" />
 
 ## 表单联动
 
@@ -262,19 +262,19 @@ export { initComponentAdapter };
 
 _注意_ 需要指定 `dependencies` 的 `triggerFields` 属性，设置由谁的改动来触发，以便表单组件能够正确的联动。
 
-<DemoPreview dir="demos/vben-form/dynamic" />
+<preview path="@/demos/vben-form/dynamic/index.vue" />
 
 ## 自定义组件
 
 如果你的业务组件库没有提供某个组件，你可以自行封装一个组件，然后加到表单内部。
 
-<DemoPreview dir="demos/vben-form/custom" />
+<preview path="@/demos/vben-form/custom/index.vue" />
 
 ## 操作
 
 一些常见的表单操作。
 
-<DemoPreview dir="demos/vben-form/api" />
+<preview path="@/demos/vben-form/api/index.vue" />
 
 ## API
 

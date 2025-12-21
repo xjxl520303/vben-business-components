@@ -12,25 +12,25 @@ outline: deep
 
 通过默认插槽设置文本内容，`maxWidth`属性设置最大宽度。
 
-<DemoPreview dir="demos/vben-ellipsis-text/line" />
+<preview path="@/demos/vben-ellipsis-text/line/index.vue" />
 
 ## 可折叠的文本块
 
 通过`line`设置折叠后的行数，`expand`属性设置是否支持展开收起。
 
-<DemoPreview dir="demos/vben-ellipsis-text/expand" />
+<preview path="@/demos/vben-ellipsis-text/expand/index.vue" />
 
 ## 自定义提示浮层
 
 通过名为`tooltip`的插槽定制提示信息。
 
-<DemoPreview dir="demos/vben-ellipsis-text/tooltip" />
+<preview path="@/demos/vben-ellipsis-text/tooltip/index.vue" />
 
 ## 自动显示 tooltip
 
 通过`tooltip-when-ellipsis`设置，仅在文本长度超出导致省略号出现时才触发 tooltip。
 
-<DemoPreview dir="demos/vben-ellipsis-text/auto-display" />
+<preview path="@/demos/vben-ellipsis-text/auto-display/index.vue" />
 
 ## API
 

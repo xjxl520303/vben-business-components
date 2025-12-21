@@ -19,6 +19,8 @@
     "@vben/locales": "workspace:*",
     "@vben/plugins": "workspace:*",
     "@vben/styles": "workspace:*",
+    "@vitepress-demo-preview/component": "^2.6.1",
+    "@vitepress-demo-preview/plugin": "^1.4.1",
     "ant-design-vue": "catalog:",
     "lucide-vue-next": "catalog:",
     "medium-zoom": "catalog:",
@@ -29,6 +31,7 @@
     "@nolebase/vitepress-plugin-git-changelog": "catalog:",
     "@vben/vite-config": "workspace:*",
     "@vite-pwa/vitepress": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
     "vitepress": "catalog:",
     "vue": "catalog:"
   }

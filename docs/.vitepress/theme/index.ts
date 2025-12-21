@@ -2,15 +2,16 @@
 import type { EnhanceAppContext, Theme } from 'vitepress';
 
 import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-changelog/client';
+import { ElementPlusContainer } from '@vitepress-demo-preview/component';
 import DefaultTheme from 'vitepress/theme';
 
-import { DemoPreview } from '../components';
 import SiteLayout from './components/site-layout.vue';
 import VbenContributors from './components/vben-contributors.vue';
 import { initHmPlugin } from './plugins/hm';
 
 import './styles';
 
+import '@vitepress-demo-preview/component/dist/style.css';
 import 'virtual:group-icons.css';
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css';
 
@@ -18,7 +19,7 @@ export default {
   async enhanceApp(ctx: EnhanceAppContext) {
     const { app } = ctx;
     app.component('VbenContributors', VbenContributors);
-    app.component('DemoPreview', DemoPreview);
+    app.component('DemoPreview', ElementPlusContainer);
     app.use(NolebaseGitChangelogPlugin);
 
     // 百度统计

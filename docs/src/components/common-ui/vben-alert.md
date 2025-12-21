@@ -28,15 +28,15 @@ Alert提供的快捷方法alert、confirm、prompt动态创建的弹窗在已打
 
 使用 `alert` 创建只有一个确认按钮的提示框。
 
-<DemoPreview dir="demos/vben-alert/alert" />
+<preview path="@/demos/vben-alert/alert/index.vue" />
 
 使用 `confirm` 创建有确认和取消按钮的提示框。
 
-<DemoPreview dir="demos/vben-alert/confirm" />
+<preview path="@/demos/vben-alert/confirm/index.vue" />
 
 使用 `prompt` 创建有确认和取消按钮、接受用户输入的提示框。
 
-<DemoPreview dir="demos/vben-alert/prompt" />
+<preview path="@/demos/vben-alert/prompt/index.vue" />
 
 ## useAlertContext
 

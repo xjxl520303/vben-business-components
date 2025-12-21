@@ -24,31 +24,31 @@ outline: deep
 
 使用 `useVbenDrawer` 创建最基础的抽屉。
 
-<DemoPreview dir="demos/vben-drawer/basic" />
+<preview path="@/demos/vben-drawer/basic/index.vue" />
 
 ## 组件抽离
 
 Drawer 内的内容一般业务中，会比较复杂，所以我们可以将 drawer 内的内容抽离出来，也方便复用。通过 `connectedComponent` 参数，可以将内外组件进行连接，而不用其他任何操作。
 
-<DemoPreview dir="demos/vben-drawer/extra" />
+<preview path="@/demos/vben-drawer/extra/index.vue" />
 
 ## 自动计算高度
 
 弹窗会自动计算内容高度，超过一定高度会出现滚动条，同时结合 `loading` 效果以及使用 `prepend-footer` 插槽。
 
-<DemoPreview dir="demos/vben-drawer/auto-height" />
+<preview path="@/demos/vben-drawer/auto-height/index.vue" />
 
 ## 使用 Api
 
 通过 `drawerApi` 可以调用 drawer 的方法以及使用 `setState` 更新 drawer 的状态。
 
-<DemoPreview dir="demos/vben-drawer/dynamic" />
+<preview path="@/demos/vben-drawer/dynamic/index.vue" />
 
 ## 数据共享
 
 如果你使用了 `connectedComponent` 参数，那么内外组件会共享数据，比如一些表单回填等操作。可以用 `drawerApi` 来获取数据和设置数据，配合 `onOpenChange`，可以满足大部分的需求。
 
-<DemoPreview dir="demos/vben-drawer/shared-data" />
+<preview path="@/demos/vben-drawer/shared-data/index.vue" />
 
 ::: info 注意
 
