@@ -191,6 +191,16 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
         },
       ],
     },
+    {
+      collapsed: false,
+      text: '业务组件',
+      items: [
+        {
+          link: 'business/bus-dialog',
+          text: 'BusDialog 对话框',
+        },
+      ],
+    },
   ];
 }
 

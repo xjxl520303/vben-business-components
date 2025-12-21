@@ -102,13 +102,13 @@ export type * from '@vben/plugins/vxe-table';
 
 使用 `useVbenVxeGrid` 创建最基础的表格。
 
-<DemoPreview dir="demos/vben-vxe-table/basic" />
+<preview path="@/demos/vben-vxe-table/basic/index.vue" />
 
 ## 远程加载
 
 通过指定 `proxyConfig.ajax` 的 `query` 方法，可以实现远程加载数据。
 
-<DemoPreview dir="demos/vben-vxe-table/remote" />
+<preview path="@/demos/vben-vxe-table/remote/index.vue" />
 
 ## 树形表格
 
@@ -122,13 +122,13 @@ treeConfig: {
 },
 ```
 
-<DemoPreview dir="demos/vben-vxe-table/tree" />
+<preview path="@/demos/vben-vxe-table/tree/index.vue" />
 
 ## 固定表头/列
 
 列固定可选参数： `'left' | 'right' | '' | null`
 
-<DemoPreview dir="demos/vben-vxe-table/fixed" />
+<preview path="@/demos/vben-vxe-table/fixed/index.vue" />
 
 ## 自定义单元格
 
@@ -159,7 +159,7 @@ vxeUI.renderer.add('CellLink', {
 });
 ```
 
-<DemoPreview dir="demos/vben-vxe-table/custom-cell" />
+<preview path="@/demos/vben-vxe-table/custom-cell/index.vue" />
 
 ## 搜索表单
 
@@ -184,19 +184,19 @@ const [Grid] = useVbenVxeGrid({
 });
 ```
 
-<DemoPreview dir="demos/vben-vxe-table/form" />
+<preview path="@/demos/vben-vxe-table/form/index.vue" />
 
 ## 单元格编辑
 
 通过指定`editConfig.mode`为`cell`，可以实现单元格编辑。
 
-<DemoPreview dir="demos/vben-vxe-table/edit-cell" />
+<preview path="@/demos/vben-vxe-table/edit-cell/index.vue" />
 
 ## 行编辑
 
 通过指定`editConfig.mode`为`row`，可以实现行编辑。
 
-<DemoPreview dir="demos/vben-vxe-table/edit-row" />
+<preview path="@/demos/vben-vxe-table/edit-row/index.vue" />
 
 ## 虚拟滚动
 
@@ -204,7 +204,7 @@ const [Grid] = useVbenVxeGrid({
 
 > 参考 [vxe-table 官方文档 - 虚拟滚动](https://vxetable.cn/v4/#/component/grid/scroll/vertical)。
 
-<DemoPreview dir="demos/vben-vxe-table/virtual" />
+<preview path="@/demos/vben-vxe-table/virtual/index.vue" />
 
 ## API
 
