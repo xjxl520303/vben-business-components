@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@vben-core/shadcn-ui": "workspace:*",
+    "@vben/business": "workspace:*",
     "@vben/common-ui": "workspace:*",
     "@vben/locales": "workspace:*",
     "@vben/plugins": "workspace:*",
@@ -22,8 +23,10 @@
     "@vitepress-demo-preview/component": "^2.6.1",
     "@vitepress-demo-preview/plugin": "^1.4.1",
     "ant-design-vue": "catalog:",
+    "element-plus": "catalog:",
     "lucide-vue-next": "catalog:",
     "medium-zoom": "catalog:",
+    "portal-vue": "^3.0.0",
     "reka-ui": "catalog:",
     "vitepress-plugin-group-icons": "catalog:"
   },

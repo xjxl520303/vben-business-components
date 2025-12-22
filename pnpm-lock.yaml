@@ -336,9 +336,6 @@ catalogs:
     playwright:
       specifier: ^1.56.1
       version: 1.56.1
-    portal-vue:
-      specifier: ^3.0.0
-      version: 3.0.0
     postcss:
       specifier: ^8.5.6
       version: 8.5.6
@@ -444,9 +441,6 @@ catalogs:
     typescript:
       specifier: ^5.9.3
       version: 5.9.3
-    ulid:
-      specifier: ^3.0.2
-      version: 3.0.2
     unbuild:
       specifier: ^3.6.1
       version: 3.6.1
@@ -721,6 +715,9 @@ importers:
       '@vben-core/shadcn-ui':
         specifier: workspace:*
         version: link:../packages/@core/ui-kit/shadcn-ui
+      '@vben/business':
+        specifier: workspace:*
+        version: link:../packages/business
       '@vben/common-ui':
         specifier: workspace:*
         version: link:../packages/effects/common-ui
@@ -742,12 +739,18 @@ importers:
       ant-design-vue:
         specifier: 'catalog:'
         version: 4.2.6(vue@3.5.24(typescript@5.9.3))
+      element-plus:
+        specifier: 'catalog:'
+        version: 2.11.8(vue@3.5.24(typescript@5.9.3))
       lucide-vue-next:
         specifier: 'catalog:'
         version: 0.553.0(vue@3.5.24(typescript@5.9.3))
       medium-zoom:
         specifier: 'catalog:'
         version: 1.1.0
+      portal-vue:
+        specifier: ^3.0.0
+        version: 3.0.0(vue@3.5.24(typescript@5.9.3))
       reka-ui:
         specifier: 'catalog:'
         version: 2.6.0(typescript@5.9.3)(vue@3.5.24(typescript@5.9.3))
@@ -1375,15 +1378,60 @@ importers:
 
   packages/business:
     dependencies:
-      portal-vue:
+      '@vben-core/form-ui':
+        specifier: workspace:*
+        version: link:../@core/ui-kit/form-ui
+      '@vben-core/shadcn-ui':
+        specifier: workspace:*
+        version: link:../@core/ui-kit/shadcn-ui
+      '@vben-core/shared':
+        specifier: workspace:*
+        version: link:../@core/base/shared
+      '@vben/hooks':
+        specifier: workspace:*
+        version: link:../effects/hooks
+      '@vben/icons':
+        specifier: workspace:*
+        version: link:../icons
+      '@vben/locales':
+        specifier: workspace:*
+        version: link:../locales
+      '@vben/preferences':
+        specifier: workspace:*
+        version: link:../preferences
+      '@vben/types':
+        specifier: workspace:*
+        version: link:../types
+      '@vben/utils':
+        specifier: workspace:*
+        version: link:../utils
+      '@vueuse/core':
         specifier: 'catalog:'
+        version: 13.9.0(vue@3.5.24(typescript@5.9.3))
+      '@vueuse/motion':
+        specifier: 'catalog:'
+        version: 3.0.3(magicast@0.5.1)(vue@3.5.24(typescript@5.9.3))
+      echarts:
+        specifier: 'catalog:'
+        version: 6.0.0
+      element-plus:
+        specifier: 'catalog:'
+        version: 2.11.8(vue@3.5.24(typescript@5.9.3))
+      portal-vue:
+        specifier: ^3.0.0
         version: 3.0.0(vue@3.5.24(typescript@5.9.3))
       ulid:
-        specifier: 'catalog:'
+        specifier: ^3.0.2
         version: 3.0.2
       vue:
         specifier: ^3.5.24
         version: 3.5.24(typescript@5.9.3)
+      vxe-pc-ui:
+        specifier: 'catalog:'
+        version: 4.10.27(vue@3.5.24(typescript@5.9.3))
+      vxe-table:
+        specifier: 'catalog:'
+        version: 4.17.15(vue@3.5.24(typescript@5.9.3))
 
   packages/constants:
     dependencies:

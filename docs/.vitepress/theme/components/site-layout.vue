@@ -85,6 +85,7 @@ const tokenTheme = computed(() => {
 <template>
   <ConfigProvider :theme="tokenTheme">
     <Layout />
+    <portal-target name="bus-dialog" multiple />
   </ConfigProvider>
 </template>
 
