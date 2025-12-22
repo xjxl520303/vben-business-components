@@ -64,9 +64,11 @@ pnpm dev:ele
 pnpm dev:docs
 ```
 
-访问：
-- 演示应用：http://localhost:5173
-- 文档站点：http://localhost:5174
+访问地址：
+- 演示应用：`http://localhost:5173`
+- 文档站点：`http://localhost:5174`
+
+> 注意：这些是本地开发地址，仅在本地开发时可用。
 
 ### 创建新组件
 
@@ -157,8 +159,8 @@ pnpm tsx scripts/check-sync-status.ts
 
 ### 1. 阅读详细文档
 
-- [项目规划文档](./PLAN.md) - 了解完整的项目规划和实施计划
-- [贡献指南](./CONTRIBUTING.md) - 了解如何贡献代码
+- [项目首页](../../index.md) - 项目介绍和快速开始
+- [部署指南](../../../DEPLOY.md) - 了解如何部署文档和示例应用
 
 ### 2. 探索现有组件
 
