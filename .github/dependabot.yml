@@ -7,6 +7,7 @@ updates:
     groups:
       non-breaking-changes:
         update-types: [minor, patch]
+    open-pull-requests-limit: 0
 
   - package-ecosystem: github-actions
     directory: '/'
