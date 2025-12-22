@@ -58,7 +58,14 @@ export const shared = defineConfig({
     },
     siteTitle: 'Vben Admin Components',
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vbenjs/vue-vben-admin' },
+      {
+        icon: 'github',
+        link: 'https://github.com/xjxl520303/vben-business-components',
+      },
+      {
+        icon: 'zhihu',
+        link: 'https://www.zhihu.com/people/jenemy',
+      },
     ],
   },
   title: 'Vben Admin Components',
