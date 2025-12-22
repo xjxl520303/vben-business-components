@@ -20,8 +20,23 @@
     }
   },
   "dependencies": {
-    "portal-vue": "catalog:",
-    "ulid": "catalog:",
-    "vue": "catalog:"
+    "@vben-core/form-ui": "workspace:*",
+    "@vben-core/shadcn-ui": "workspace:*",
+    "@vben-core/shared": "workspace:*",
+    "@vben/hooks": "workspace:*",
+    "@vben/icons": "workspace:*",
+    "@vben/locales": "workspace:*",
+    "@vben/preferences": "workspace:*",
+    "@vben/types": "workspace:*",
+    "@vben/utils": "workspace:*",
+    "@vueuse/core": "catalog:",
+    "@vueuse/motion": "catalog:",
+    "echarts": "catalog:",
+    "element-plus": "catalog:",
+    "portal-vue": "^3.0.0",
+    "ulid": "^3.0.2",
+    "vue": "catalog:",
+    "vxe-pc-ui": "catalog:",
+    "vxe-table": "catalog:"
   }
 }
