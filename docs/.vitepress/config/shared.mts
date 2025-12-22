@@ -33,6 +33,10 @@ const alias = {
 export const shared = defineConfig({
   appearance: 'dark',
   head: head(),
+  ignoreDeadLinks: [
+    // 忽略 localhost 链接（开发环境地址）
+    /^http:\/\/localhost/,
+  ],
   markdown: {
     preConfig(md) {
       md.use(groupIconMdPlugin);
