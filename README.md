@@ -29,6 +29,7 @@ Vben Business Components 是在 [vue-vben-admin](https://github.com/vbenjs/vue-v
 | 组件名称     | 说明                         | 使用基础库      | 适用场景               |
 | ------------ | ---------------------------- | --------------- | ---------------------- |
 | [BusDialog](/packages/business/src/bus-dialog/use-bus-dialog.tsx) | ElDialog 对话框封装 | Vueuse/portal-vue | 通用性强 & 使用简单 & 功能强大，可作为其他对话框场景二次封装的底层组件 |
+| [BusPageHeader](/packages/business/src/bus-page-header/index.vue) | 页面头部组件 | portal-vue | 适用于企业管理系统中需要走流程的功能的创建、编辑和详情页面，提供返回按钮、页面标题或选项卡功能 |
 
 更多组件开发中，敬请期待！如有建议欢迎提交 issue 或 PR 共同完善。
 

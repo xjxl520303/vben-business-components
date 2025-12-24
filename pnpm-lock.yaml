@@ -24,6 +24,9 @@ catalogs:
     '@commitlint/config-conventional':
       specifier: ^19.8.1
       version: 19.8.1
+    '@element-plus/icons-vue':
+      specifier: ^2.3.2
+      version: 2.3.2
     '@eslint/js':
       specifier: ^9.39.1
       version: 9.39.1
@@ -712,6 +715,9 @@ importers:
 
   docs:
     dependencies:
+      '@element-plus/icons-vue':
+        specifier: 'catalog:'
+        version: 2.3.2(vue@3.5.24(typescript@5.9.3))
       '@vben-core/shadcn-ui':
         specifier: workspace:*
         version: link:../packages/@core/ui-kit/shadcn-ui
@@ -1378,6 +1384,9 @@ importers:
 
   packages/business:
     dependencies:
+      '@element-plus/icons-vue':
+        specifier: 'catalog:'
+        version: 2.3.2(vue@3.5.24(typescript@5.9.3))
       '@vben-core/form-ui':
         specifier: workspace:*
         version: link:../@core/ui-kit/form-ui
