@@ -22,6 +22,7 @@
     "@vben/styles": "workspace:*",
     "@vitepress-demo-preview/component": "^2.6.1",
     "@vitepress-demo-preview/plugin": "^1.4.1",
+    "@element-plus/icons-vue": "catalog:",
     "ant-design-vue": "catalog:",
     "element-plus": "catalog:",
     "lucide-vue-next": "catalog:",

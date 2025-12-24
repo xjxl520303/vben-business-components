@@ -199,6 +199,10 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
           link: 'business/bus-dialog',
           text: 'BusDialog 对话框',
         },
+        {
+          link: 'business/bus-page-header',
+          text: 'BusPageHeader 页面头部',
+        },
       ],
     },
   ];
