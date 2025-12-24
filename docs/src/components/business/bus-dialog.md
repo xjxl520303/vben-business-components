@@ -337,11 +337,10 @@ const res = openDialog({
 
 ```ts
 /* eslint-disable perfectionist/sort-interfaces */
+import type { DialogProps } from 'element-plus';
 import type { JSX } from 'vue/jsx-runtime';
 
-import type { ExtractPropTypes, VNodeChild } from 'vue';
-
-import { dialogProps } from 'element-plus';
+import type { VNodeChild } from 'vue';
 
 /**
  * 对话框关闭原因
@@ -372,7 +371,7 @@ export interface BusDialogProps {
   /**
    * `<el-dialog>` 的属性
    */
-  dialogConfig?: Partial<ExtractPropTypes<typeof dialogProps>>;
+  dialogConfig?: Partial<DialogProps>;
 
   /**
    * 对话框底部按钮配置
