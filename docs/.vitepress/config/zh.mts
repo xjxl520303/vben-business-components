@@ -200,6 +200,10 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
           text: 'BusDialog 对话框',
         },
         {
+          link: 'business/bus-group',
+          text: 'BusGroup 表单内容分组',
+        },
+        {
           link: 'business/bus-page-header',
           text: 'BusPageHeader 页面头部',
         },
