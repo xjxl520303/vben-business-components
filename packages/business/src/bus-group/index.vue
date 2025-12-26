@@ -96,11 +96,14 @@ const isFold = ref(props.defaultFolded);
           </svg>
         </div>
       </div>
-      <div class="shrink-0 font-bold text-black">
+      <div class="shrink-0 font-bold text-[var(--el-text-color-primary)]">
         {{ title }}
       </div>
       <slot name="desc">
-        <div class="ml-3 truncate text-xs text-gray-500" :title="description">
+        <div
+          class="ml-3 truncate text-xs text-[var(--el-text-color-regular)]"
+          :title="description"
+        >
           {{ description }}
         </div>
       </slot>
@@ -124,7 +127,12 @@ const isFold = ref(props.defaultFolded);
   width: 100%;
   border-radius: 4px;
   & > .header {
-    background-image: linear-gradient(270deg, #f9fcff 0%, #f0f9ff 100%);
+    background-color: var(--el-bg-color-page);
+    background-image: linear-gradient(
+      270deg,
+      var(--el-fill-color-lighter) 0%,
+      var(--el-bg-color-page) 100%
+    );
   }
 }
 .expand {
