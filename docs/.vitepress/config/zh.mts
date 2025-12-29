@@ -207,6 +207,10 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
           link: 'business/bus-page-header',
           text: 'BusPageHeader 页面头部',
         },
+        {
+          link: 'business/bus-steps',
+          text: 'BusSteps 步骤条',
+        },
       ],
     },
   ];
