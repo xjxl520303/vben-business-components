@@ -50,7 +50,7 @@ defineExpose<{
     <template v-for="(option, index) in options" :key="option.value">
       <div class="inline-flex items-center leading-6">
         <div
-          class="bg-primary inline-flex h-6 w-6 select-none items-center justify-center divide-x-[1px] divide-y-[1px] rounded-[4px]"
+          class="inline-flex h-6 w-6 select-none items-center justify-center divide-x-[1px] divide-y-[1px] rounded-[4px]"
           :class="{
             'bg-[var(--el-color-primary)] text-[var(--el-color-white)]':
               option.status === 'process',
