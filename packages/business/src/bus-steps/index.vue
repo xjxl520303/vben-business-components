@@ -74,8 +74,15 @@ defineExpose<{
         </div>
       </div>
       <template v-if="index >= 0 && index < props.options.length - 1">
-        <el-divider class="m-3 flex-1" :style="{ minWidth: `${space}px` }" />
+        <el-divider :style="{ minWidth: `${space}px` }" />
       </template>
     </template>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.el-divider--horizontal {
+  margin: 0 12px;
+  flex: 1;
+}
+</style>

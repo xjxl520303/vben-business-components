@@ -4,7 +4,7 @@ outline: deep
 
 # Vben BusSteps 步骤条
 
-这是一个轻量级的步骤条组件，用于展示一个任务的进度。主要适用于表格穿梭框组件 `<bus-table-transfer>`（待开发） 或者树型穿梭框组件 `<bus-tree-transfer>`（待开发） 配合使用。如果有复杂的需求请考虑使用基础组件库的 `<el-steps>` 组件进行调整。
+BusSteps 是一个轻量级的步骤条组件，用于展示多步骤流程的当前步骤位置。该组件主要设计用于与表格穿梭框组件 `<bus-table-transfer>`（待开发）或树型穿梭框组件 `<bus-tree-transfer>`（待开发）配合使用。对于更复杂的步骤条需求，建议使用 Element Plus 提供的 `<el-steps>` 组件。
 
 ## 基础用法
 
