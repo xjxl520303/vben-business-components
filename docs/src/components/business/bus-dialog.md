@@ -229,6 +229,15 @@ function openWithRender() {
 
 <preview path="@/demos/bus-dialog/before-close/index.vue" />
 
+## 保留 ElDialog 实例不被销毁
+
+默认情况下 `BusDialog` 会在关闭时自动销毁 `ElDialog` 组件实例，并默认设置了属性 `destroyOnClose` 为 `true`。如果想要保留 `ElDialog` 的实例不被销毁，请按以下方式来设置：
+
+1. 将 `useBusDialog()` 的第一个参数 `keepInstance` 设置为 `true`。
+2. 建议同时通过 `useBusDialog()` 第二个参数 `targetName`（例如：`bus-dialog-keep`） 添加自己的 portal-target 目标名称来挂载 `ElDialog` 的实例，并在当前 `BusDialog` 所在页面放置 `<portal-target name="bus-dialog-keep" multiple />`，这样 `ElDialog` 实例跟随页面一同销毁。
+
+<preview path="@/demos/bus-dialog/keep-instance/index.vue" />
+
 ## 如何二次封装
 
 组件只提供了最基础的功能，基于当前组件可以扩展出很多的业务组件，这里给出一个典型的场景示例：在打开对话框前显示加载状态，避免用户长时间等待。
@@ -287,12 +296,25 @@ export function useBusXxx() {
 ```ts
 import { useBusDialog } from '@vben/business';
 
-const { openDialog, /* 导出参数 */ } = useBusDialog();
+const { openDialog, /* 导出参数 */ } = useBusDialog(keepInstance?, targetName?);
 
 const res = openDialog({
   // 配置
 })
 ```
+
+### useBusDialog 参数
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| keepInstance | 是否保持实例（不销毁 `ElDialog` 组件，可以多次打开同一个对话框） | `boolean` | `false` |
+| targetName | `ElDialog` 组件放置位置 `portal-vue` 目标名称 | `string` | `'bus-dialog'` |
+
+### openDialog 参数
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| args | 对话框配置参数 | `BusDialogProps \| undefined` | `undefined` |
 
 ### Props
 
