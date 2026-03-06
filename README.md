@@ -12,6 +12,9 @@
 
 ## 📖 项目介绍
 
+> **⚠️ 项目迁移通知**  
+> 本项目已迁移至 [https://github.com/xjxl520303/element-plus-lab](https://github.com/xjxl520303/element-plus-lab)，后续更新将在新仓库进行。本仓库将仅作历史保留，建议访问新仓库获取最新版本。
+
 Vben Business Components 是在 [vue-vben-admin](https://github.com/vbenjs/vue-vben-admin) 的基础上添加了管理系统中一些常用的业务组件，专注于 **Element Plus** UI 框架的常用业务组件开发与分享。
 
 本项目的初衷在于分享在企业管理系统中积累的一些基于 Element Plus 的业务公共组件，以及公司基于 Element plus 二次开发添加的额外基础组件，除此之外也分享基于 portal-vue 的开发模式探索。
